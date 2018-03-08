@@ -1,0 +1,23 @@
+{
+    "collab_server" : "",
+    "contents" : "",
+    "created" : 1520472676102.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "0",
+    "id" : "ED0A9F76",
+    "lastKnownWriteTime" : 1520474102,
+    "last_content_update" : 1520474102459,
+    "path" : "~/Dropbox/devel/roundhouse/README.Rmd",
+    "project_path" : null,
+    "properties" : {
+        "cursorPosition" : "40,0",
+        "last_setup_crc32" : "",
+        "scrollLine" : "15"
+    },
+    "relative_order" : 2,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "r_markdown"
+}

@@ -1,0 +1,40 @@
+---
+output:
+  md_document:
+    variant: markdown_github
+---
+
+```{r setup, echo = FALSE}
+knitr::opts_chunk$set(
+  cache = FALSE,
+  collapse = TRUE,
+  message = FALSE, 
+  # warning = FALSE,
+  comment = "#>",
+  fig.align = "center",
+  fig.path = "tools/README-"
+)
+```
+
+# roundhouse: An R wrapper to the ICNDb API <img src="tools/roundhouse-logo.png" align="right" />
+
+Ya, this is happening too...
+
+
+## Installation
+
+You can install the development version of `roundhouse` grom GitHub using
+```{r, eval=FALSE}
+if (!requireNamespace("devtools")) install.packages("devtools")
+devtools::install_github("bgreenwell/roundhouse")
+```
+
+## Basic usage
+
+```{r}
+roundhouse::random_fact()
+```
+
+## Inspirations
+
+* [Lone Wolf McQuade](https://www.youtube.com/watch?v=pfLTbzU0FXo)

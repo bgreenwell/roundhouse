@@ -1,0 +1,22 @@
+{
+    "collab_server" : "",
+    "contents" : "",
+    "created" : 1520457795314.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "431467012",
+    "id" : "1BB817A7",
+    "lastKnownWriteTime" : 1520472501,
+    "last_content_update" : 1520472501183,
+    "path" : "~/Dropbox/devel/Roundhouse/R/random_fact.R",
+    "project_path" : "R/random_fact.R",
+    "properties" : {
+        "cursorPosition" : "17,63",
+        "scrollLine" : "0"
+    },
+    "relative_order" : 2,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "r_source"
+}
