@@ -17,6 +17,7 @@ Basic usage
 -----------
 
 ``` r
+# Generate a random facts
 roundhouse::random_fact()
 #> [1] "TNT was originally developed by Chuck Norris to cure indigestion."
 ```
