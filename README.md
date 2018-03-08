@@ -3,6 +3,8 @@ roundhouse: An R wrapper to the ICNDb API <img src="tools/roundhouse-logo.png" a
 
 Generate random Chuck Norris facts from the excellent internet Chuck Norris database 😎
 
+⚠️ **WARNING:** Some facts may contain explicit material!
+
 Installation
 ------------
 
@@ -26,6 +28,10 @@ roundhouse::random_fact(3)
 #> [1] "Chuck Norris doesn't need garbage collection because he doesn't call .Dispose(), he calls .DropKick()."
 #> [2] "There are no steroids in baseball. Just players Chuck Norris has breathed on."                         
 #> [3] "All browsers support the hex definitions #chuck and #norris for the colors black and blue."
+
+# Print fact categories
+roundhouse::fetch_categories()
+#> [1] "explicit" "nerdy"
 ```
 
 Inspirations

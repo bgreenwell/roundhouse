@@ -1,4 +1,4 @@
-#' Random Chuck Norris Fact
+#' Random Chuck Norris facts
 #'
 #' Query the internet Chuck Norris databse (ICNDb) for a random Chuck Norris
 #' fact.
@@ -8,12 +8,13 @@
 #'
 #' @param include Character string specifying the category of the joke. Default
 #' is \code{NULL} meaning use all available categories in the query. The
-#' available categories can be viewed using \code{fetch_categories()}.
+#' available categories can be viewed using \code{fetch_categories()}. (
+#' Currently ignored.)
 #'
 #' @param exclude Character string specifying the categories to excluse.
 #' Currently ignored. Default is \code{NULL} meaning use all available
 #' categories in the query. The available categories can be viewed using
-#' \code{fetch_categories()}.
+#' \code{fetch_categories()}. (Currently ignored.)
 #'
 #' @return An object of class \code{"random_fact"}; essentially a character
 #' vector.
@@ -23,10 +24,14 @@
 #' @export
 #'
 #' @examples
+#' # Generate a random fact
 #' random_fact()
+#'
+#' # Generate multiple random facts
+#' random_fact(3)
 random_fact <- function(n = 1L, include = NULL, exclude = NULL) {
 
-  # Query the NPPES API
+  # Query the ICNDb API
   # url <- modify_url("http://api.icndb.com/jokes/random/", path = n)
   url <- paste0("http://api.icndb.com/jokes/random/", n)
   resp <- httr::GET(url)
@@ -51,7 +56,7 @@ random_fact <- function(n = 1L, include = NULL, exclude = NULL) {
     )
   }
 
-  # Return a nppes_api object (a list)
+  # Return a random_fact object (a list)
   structure(
     list(
       "content" = parsed,
@@ -72,4 +77,45 @@ print.random_fact <- function(x, ...) {
   })))
   # print.default(x$content$value[[1L]]$joke)
   invisible(x)
+}
+
+
+#' Fetch available categories
+#'
+#' Fetch all available Chuck Norris fact categories.
+#'
+#' @export
+#'
+#' @examples
+#' # Fetch all available fact categories
+#' fetch_categories()
+fetch_categories <- function() {
+
+  # Query ICNDb API
+  url <- "http://api.icndb.com/categories"
+  resp <- httr::GET(url)
+  if (httr::http_type(resp) != "application/json") {
+    stop("API did not return json", call. = FALSE)
+  }
+
+  # Parse the returned JSON file
+  parsed <- jsonlite::fromJSON(httr::content(resp, as = "text"),
+                               simplifyVector = FALSE)
+
+  # Turn API errors into R errors
+  if (httr::http_error(resp)) {
+    stop(
+      sprintf(
+        "ICNDb API request failed [%s]\n%s\n<%s>",
+        status_code(resp),
+        parsed$message,
+        parsed$documentation_url
+      ),
+      call. = FALSE
+    )
+  }
+
+  # Return vector of categories
+  unlist(parsed$value)
+
 }

@@ -3,7 +3,7 @@
 \name{random_fact}
 \alias{random_fact}
 \alias{print.random_fact}
-\title{Random Chuck Norris Fact}
+\title{Random Chuck Norris facts}
 \usage{
 random_fact(n = 1L, include = NULL, exclude = NULL)
 
@@ -15,12 +15,13 @@ random_fact(n = 1L, include = NULL, exclude = NULL)
 
 \item{include}{Character string specifying the category of the joke. Default
 is \code{NULL} meaning use all available categories in the query. The
-available categories can be viewed using \code{fetch_categories()}.}
+available categories can be viewed using \code{fetch_categories()}. (
+Currently ignored.)}
 
 \item{exclude}{Character string specifying the categories to excluse.
 Currently ignored. Default is \code{NULL} meaning use all available
 categories in the query. The available categories can be viewed using
-\code{fetch_categories()}.}
+\code{fetch_categories()}. (Currently ignored.)}
 }
 \value{
 An object of class \code{"random_fact"}; essentially a character
@@ -31,5 +32,9 @@ Query the internet Chuck Norris databse (ICNDb) for a random Chuck Norris
 fact.
 }
 \examples{
+# Generate a random fact
 random_fact()
+
+# Generate multiple random facts
+random_fact(3)
 }
