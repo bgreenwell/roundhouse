@@ -20,14 +20,13 @@ knitr::opts_chunk$set(
 
 Generate random Chuck Norris facts from the excellent internet Chuck Norris database `r emo::ji("sunglasses")`
 
-Chuck Norris solved the Travelling Salesman problem in O(1) time. Here’s the pseudo-code:
+## Sample fact
+
+Chuck Norris solved the [travelling salesman problem](https://en.wikipedia.org/wiki/Travelling_salesman_problem) in $O\left(1\right)$ time. Here’s the pseudo-code:
 ```
 Break salesman into N pieces.
 Kick each piece to a different city.
 ```
-
-`r emo::ji("warning")` **WARNING:** Some facts may contain explicit material!
-
 
 ## Installation
 
@@ -38,6 +37,8 @@ devtools::install_github("bgreenwell/roundhouse")
 ```
 
 ## Basic usage
+
+`r emo::ji("warning")` **WARNING:** Some facts may contain explicit material!
 
 ```{r, eval = FALSE}
 # Generate a random fact

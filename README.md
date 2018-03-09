@@ -3,12 +3,13 @@ roundhouse: An R wrapper to the ICNDb API <img src="tools/roundhouse-logo.png" a
 
 Generate random Chuck Norris facts from the excellent internet Chuck Norris database 😎
 
-Chuck Norris solved the Travelling Salesman problem in O(1) time. Here’s the pseudo-code:
+Sample fact
+-----------
+
+Chuck Norris solved the [travelling salesman problem](https://en.wikipedia.org/wiki/Travelling_salesman_problem) in *O*(1) time. Here’s the pseudo-code:
 
     Break salesman into N pieces.
     Kick each piece to a different city.
-
-⚠️ **WARNING:** Some facts may contain explicit material!
 
 Installation
 ------------
@@ -22,6 +23,8 @@ devtools::install_github("bgreenwell/roundhouse")
 
 Basic usage
 -----------
+
+⚠️ **WARNING:** Some facts may contain explicit material!
 
 ``` r
 # Generate a random fact
