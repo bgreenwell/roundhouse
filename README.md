@@ -3,6 +3,11 @@ roundhouse: An R wrapper to the ICNDb API <img src="tools/roundhouse-logo.png" a
 
 Generate random Chuck Norris facts from the excellent internet Chuck Norris database 😎
 
+Chuck Norris solved the Travelling Salesman problem in O(1) time. Here’s the pseudo-code:
+
+    Break salesman into N pieces.
+    Kick each piece to a different city.
+
 ⚠️ **WARNING:** Some facts may contain explicit material!
 
 Installation

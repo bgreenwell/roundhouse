@@ -20,6 +20,12 @@ knitr::opts_chunk$set(
 
 Generate random Chuck Norris facts from the excellent internet Chuck Norris database `r emo::ji("sunglasses")`
 
+Chuck Norris solved the Travelling Salesman problem in O(1) time. Here’s the pseudo-code:
+```
+Break salesman into N pieces.
+Kick each piece to a different city.
+```
+
 `r emo::ji("warning")` **WARNING:** Some facts may contain explicit material!
 
 
