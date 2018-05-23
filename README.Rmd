@@ -16,7 +16,9 @@ knitr::opts_chunk$set(
 )
 ```
 
-# roundhouse: An R wrapper to the ICNDb API <img src="tools/roundhouse-logo.png" align="right" />
+# roundhouse: An R wrapper to the ICNDb API <img src="tools/roundhouse-logo.png" align="right" width="130" height="150" />
+
+## Overview 
 
 Generate random Chuck Norris facts from the excellent internet Chuck Norris database `r emo::ji("sunglasses")`
 

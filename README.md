@@ -1,12 +1,18 @@
-roundhouse: An R wrapper to the ICNDb API <img src="tools/roundhouse-logo.png" align="right" />
-===============================================================================================
+roundhouse: An R wrapper to the ICNDb API <img src="tools/roundhouse-logo.png" align="right" width="130" height="150" />
+========================================================================================================================
 
-Generate random Chuck Norris facts from the excellent internet Chuck Norris database 😎
+Overview
+--------
+
+Generate random Chuck Norris facts from the excellent internet Chuck
+Norris database 😎
 
 Sample fact
 -----------
 
-Chuck Norris solved the [travelling salesman problem](https://en.wikipedia.org/wiki/Travelling_salesman_problem) in *O*(1) time. Here’s the pseudo-code:
+Chuck Norris solved the [travelling salesman
+problem](https://en.wikipedia.org/wiki/Travelling_salesman_problem) in
+*O*(1) time. Here’s the pseudo-code:
 
     Break salesman into N pieces.
     Kick each piece to a different city.
@@ -14,7 +20,8 @@ Chuck Norris solved the [travelling salesman problem](https://en.wikipedia.org/w
 Installation
 ------------
 
-You can install the development version of `roundhouse` from GitHub using
+You can install the development version of `roundhouse` from GitHub
+using
 
 ``` r
 if (!requireNamespace("devtools")) install.packages("devtools")
