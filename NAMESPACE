@@ -3,3 +3,4 @@
 S3method(print,random_fact)
 export(fetch_categories)
 export(random_fact)
+export(roundhouse)

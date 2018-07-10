@@ -56,7 +56,16 @@ roundhouse::random_fact(3)
 # Print fact categories
 roundhouse::fetch_categories()
 #> [1] "explicit" "nerdy"
+
+# Generate a random fact with a roundhouse kick!
+roundhouse(width = 40, size = 15)
 ```
+
+<!-- gif <- roundhouse(width = 40, size = 15) -->
+<!-- magick::image_write(gif, path = "tools/roundhouse.gif") -->
+
+![](tools/roundhouse.gif)
+
 
 ## Inspirations
 
