@@ -2,12 +2,9 @@
 % Please edit documentation in R/random_fact.R
 \name{random_fact}
 \alias{random_fact}
-\alias{print.random_fact}
 \title{Random Chuck Norris facts}
 \usage{
 random_fact(n = 1L, include = NULL, exclude = NULL)
-
-\method{print}{random_fact}(x, ...)
 }
 \arguments{
 \item{n}{Integer specifying the number of random facts to return. Default is

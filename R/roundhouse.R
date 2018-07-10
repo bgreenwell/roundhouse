@@ -16,6 +16,7 @@
 roundhouse <- function(width = 15, color = "white", ...) {
   url <- "https://media.giphy.com/media/l1J3nY7N7LBrBobVm/giphy.gif"
   fact <- random_fact()[["content"]][["value"]][[1L]][["joke"]]
+  fact <- gsub("&quot;", replacement = "'", x = fact)
   fact <- paste0(strwrap(fact, width = width), collapse = "\n")
   gif <- magick::image_read(url)
   magick::image_annotate(gif, text = fact, color = color, ...)

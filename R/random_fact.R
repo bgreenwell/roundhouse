@@ -48,7 +48,7 @@ random_fact <- function(n = 1L, include = NULL, exclude = NULL) {
     stop(
       sprintf(
         "ICNDb API request failed [%s]\n%s\n<%s>",
-        status_code(resp),
+        httr::status_code(resp),
         parsed$message,
         parsed$documentation_url
       ),
@@ -68,7 +68,7 @@ random_fact <- function(n = 1L, include = NULL, exclude = NULL) {
 }
 
 
-#' @rdname random_fact
+#' @keywords internal
 #'
 #' @export
 print.random_fact <- function(x, ...) {
@@ -107,7 +107,7 @@ fetch_categories <- function() {
     stop(
       sprintf(
         "ICNDb API request failed [%s]\n%s\n<%s>",
-        status_code(resp),
+        httr::status_code(resp),
         parsed$message,
         parsed$documentation_url
       ),
