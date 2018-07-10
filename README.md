@@ -1,6 +1,11 @@
 roundhouse: An R wrapper to the ICNDb API <img src="tools/roundhouse-logo.png" align="right" width="130" height="150" />
 ========================================================================================================================
 
+[![Travis-CI Build
+Status](https://travis-ci.org/bgreenwell/roundhouse.svg?branch=master)](https://travis-ci.org/bgreenwell/roundhouse)
+[![AppVeyor Build
+Status](https://ci.appveyor.com/api/projects/status/github/bgreenwell/roundhouse?branch=master&svg=true)](https://ci.appveyor.com/project/bgreenwell/roundhouse)
+
 Overview
 --------
 
