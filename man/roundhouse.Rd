@@ -4,9 +4,13 @@
 \alias{roundhouse}
 \title{Roundhouse}
 \usage{
-roundhouse(width = 15, color = "white", ...)
+roundhouse(text = NULL, width = 15, color = "white", ...)
 }
 \arguments{
+\item{text}{Character string specifying the text to display with the
+roundhouse (preferably, a Chuck Norris fact). If \code{NULL}, a fact is
+selected at random from the ICNDb.}
+
 \item{width}{Integer specifying the number of characters per line.}
 
 \item{color}{Character string specifying the color of the text.}
@@ -19,4 +23,7 @@ Generate a random Chuck Norris fact with a roundhouse kick.
 }
 \examples{
 roundhouse(width = 40, size = 15)
+
+roundhouse("Chuck Norris can’t test for equality because he has no equal.",
+           width = 40, size = 25)
 }

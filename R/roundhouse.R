@@ -2,6 +2,10 @@
 #'
 #' Generate a random Chuck Norris fact with a roundhouse kick.
 #'
+#' @param text Character string specifying the text to display with the
+#' roundhouse (preferably, a Chuck Norris fact). If \code{NULL}, a fact is
+#' selected at random from the ICNDb.
+#'
 #' @param width Integer specifying the number of characters per line.
 #'
 #' @param color Character string specifying the color of the text.
@@ -13,11 +17,20 @@
 #'
 #' @examples
 #' roundhouse(width = 40, size = 15)
-roundhouse <- function(width = 15, color = "white", ...) {
-  url <- "https://media.giphy.com/media/l1J3nY7N7LBrBobVm/giphy.gif"
-  fact <- random_fact()[["content"]][["value"]][[1L]][["joke"]]
-  fact <- gsub("&quot;", replacement = "'", x = fact)
-  fact <- paste0(strwrap(fact, width = width), collapse = "\n")
-  gif <- magick::image_read(url)
-  magick::image_annotate(gif, text = fact, color = color, ...)
+#'
+#' roundhouse("Chuck Norris can’t test for equality because he has no equal.",
+#'            width = 40, size = 25)
+roundhouse <- function(text = NULL, width = 15, color = "white", ...) {
+  if (is.null(text)) {
+    text <- gsub(
+      pattern = "&quot;",
+      replacement = "'",
+      x = random_fact()[["content"]][["value"]][[1L]][["joke"]]
+    )
+  }
+  text <- paste0(strwrap(text, width = width), collapse = "\n")
+  gif <- magick::image_read(
+    path = "https://media.giphy.com/media/l1J3nY7N7LBrBobVm/giphy.gif"
+  )
+  magick::image_annotate(gif, text = text, color = color, ...)
 }
