@@ -47,7 +47,7 @@ devtools::install_github("bgreenwell/roundhouse")
 
 `r emo::ji("warning")` **WARNING:** Some facts may contain explicit material!
 
-```{r, eval = FALSE}
+```{r example-01, eval = FALSE}
 # Generate a random fact
 roundhouse::random_fact()
 #> [1] "Chuck Norris has never been accused of murder because his roundhouse kicks are recognized as 'acts of God.'"
@@ -70,7 +70,7 @@ roundhouse(width = 40, size = 15)
 <!-- magick::image_write(gif, path = "tools/roundhouse.gif") -->
 
 ![](tools/roundhouse.gif)
-```{r}
+```{r example-02}
 # Or simply supply your own text!
 library(roundhouse)
 roundhouse("Chuck Norris can’t test for equality because he has no equal.",

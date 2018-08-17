@@ -70,7 +70,7 @@ roundhouse("Chuck Norris can’t test for equality because he has no equal.",
            width = 40, size = 25, fps = 5)
 ```
 
-<img src="tools/README-unnamed-chunk-3-1.gif" style="display: block; margin: auto auto auto 0;" />
+<img src="tools/README-example-02-1.gif" style="display: block; margin: auto auto auto 0;" />
 
 Inspirations
 ------------
