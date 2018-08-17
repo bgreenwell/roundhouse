@@ -4,7 +4,8 @@
 \alias{roundhouse}
 \title{Roundhouse}
 \usage{
-roundhouse(text = NULL, width = 15, color = "white", ...)
+roundhouse(text = NULL, width = 15, color = "white", fps = NULL,
+  loop = 0, ...)
 }
 \arguments{
 \item{text}{Character string specifying the text to display with the
@@ -14,6 +15,11 @@ selected at random from the ICNDb.}
 \item{width}{Integer specifying the number of characters per line.}
 
 \item{color}{Character string specifying the color of the text.}
+
+\item{fps}{Integer specifying the frames per second of the roundhouse kick.}
+
+\item{loop}{Integer specifying the number of times the roundhouse kick should
+be repeated. Default is \code{0} which results in infinite roundhouse kicks.}
 
 \item{...}{Additional optional arguments to be passed onto
 \code{\link[magick]{image_annotate}}.}
@@ -25,5 +31,5 @@ Generate a random Chuck Norris fact with a roundhouse kick.
 roundhouse(width = 40, size = 15)
 
 roundhouse("Chuck Norris can’t test for equality because he has no equal.",
-           width = 40, size = 25)
+           width = 40, size = 25, fps = 5, loop = 3)
 }

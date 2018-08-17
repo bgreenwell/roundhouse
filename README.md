@@ -67,7 +67,7 @@ roundhouse(width = 40, size = 15)
 # Or simply supply your own text!
 library(roundhouse)
 roundhouse("Chuck Norris can’t test for equality because he has no equal.",
-           width = 40, size = 25)
+           width = 40, size = 25, fps = 5)
 ```
 
 <img src="tools/README-unnamed-chunk-3-1.gif" style="display: block; margin: auto auto auto 0;" />
