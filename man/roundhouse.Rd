@@ -19,7 +19,8 @@ selected at random from the ICNDb.}
 \item{fps}{Integer specifying the frames per second of the roundhouse kick.}
 
 \item{loop}{Integer specifying the number of times the roundhouse kick should
-be repeated. Default is \code{0} which results in infinite roundhouse kicks.}
+be repeated. Though a single roundhouse kick is always sufficient, the
+default is \code{0} which results in an infinite number of roundhouse kicks.}
 
 \item{...}{Additional optional arguments to be passed onto
 \code{\link[magick]{image_annotate}}.}
@@ -31,5 +32,5 @@ Generate a random Chuck Norris fact with a roundhouse kick.
 roundhouse(width = 40, size = 15)
 
 roundhouse("Chuck Norris can’t test for equality because he has no equal.",
-           width = 40, size = 25, fps = 5, loop = 3)
+           width = 40, size = 25, fps = 5)
 }
