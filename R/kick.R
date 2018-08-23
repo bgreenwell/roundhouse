@@ -39,6 +39,9 @@
 #'      type = 2, width = 40, size = 25, fps = 5)
 kick <- function(text = NULL, type = 1, width = 35, size = 20, color = "white",
                  fps = NULL, loop = 0, ...) {
+  if (!requireNamespace("magick", quietly = TRUE)) {
+    stop("The magick package is required for roundhouse kicks.", call. = FALSE)
+  }
   if (!(type %in% 1:2)) {
     stop("Argument `type` must be 1 or 2.")
   }
