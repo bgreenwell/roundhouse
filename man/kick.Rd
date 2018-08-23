@@ -4,23 +4,27 @@
 \alias{kick}
 \title{Roundhouse kick}
 \usage{
-kick(text = NULL, kick_type = 1, width = 15, color = "white",
-  fps = NULL, loop = 0, ...)
+kick(text = NULL, type = 1, width = 35, size = 20,
+  color = "white", fps = NULL, loop = 0, ...)
 }
 \arguments{
 \item{text}{Character string specifying the text to display with the
 roundhouse (preferably, a Chuck Norris fact). If \code{NULL}, a fact is
 selected at random from the ICNDb.}
 
-\item{kick_type}{Integer specifying which roundhouse kick to generate.
-Current options are 1 (standard roundhouse kick) or 2 (roundhouse kick bad
-guy through bar window). Default is 1.}
+\item{type}{Integer specifying which roundhouse kick to generate. Current
+options are 1 (standard roundhouse kick) or 2 (roundhouse kick bad guy
+through bar window). Default is 1.}
 
-\item{width}{Integer specifying the number of characters per line.}
+\item{width}{Integer specifying the number of characters per line. Default is
+35}
+
+\item{size}{Integer specifying the font size in pixels. Defaul is 10.}
 
 \item{color}{Character string specifying the color of the text.}
 
-\item{fps}{Integer specifying the frames per second of the roundhouse kick.}
+\item{fps}{Integer specifying the frames per second of the roundhouse kick.
+(Must be a factor of 100.)}
 
 \item{loop}{Integer specifying the number of times the roundhouse kick should
 be repeated. Though a single roundhouse kick is always sufficient, the
@@ -34,8 +38,10 @@ Generate a roundhouse kick from Chuck Norris...with a random fact (or user-
 supplied text).
 }
 \examples{
+# Random fact
 kick(width = 40, size = 15)
 
+# User-supplied text
 kick("Chuck Norris can’t test for equality because he has no equal.",
-     width = 40, size = 25, fps = 5)
+     type = 2, width = 40, size = 25, fps = 5)
 }

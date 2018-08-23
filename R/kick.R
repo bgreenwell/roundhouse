@@ -31,8 +31,10 @@
 #' @export
 #'
 #' @examples
+#' # Random fact
 #' kick(width = 40, size = 15)
 #'
+#' # User-supplied text
 #' kick("Chuck Norris can’t test for equality because he has no equal.",
 #'      type = 2, width = 40, size = 25, fps = 5)
 kick <- function(text = NULL, type = 1, width = 35, size = 20, color = "white",
@@ -40,6 +42,7 @@ kick <- function(text = NULL, type = 1, width = 35, size = 20, color = "white",
   if (!(type %in% 1:2)) {
     stop("Argument `type` must be 1 or 2.")
   }
+
   if (is.null(text)) {
     text <- gsub(
       pattern = "&quot;",
@@ -47,10 +50,12 @@ kick <- function(text = NULL, type = 1, width = 35, size = 20, color = "white",
       x = random_fact()[["content"]][["value"]][[1L]][["joke"]]
     )
   }
+  path <- system.file("extdata", paste0("kick-0", type, ".gif"),
+                      package = "roundhouse")
   text <- paste0(strwrap(text, width = width), collapse = "\n")
   gif <- magick::image_read(
     # path = "https://media.giphy.com/media/l1J3nY7N7LBrBobVm/giphy.gif"
-    path = paste0("tools/kick-0", type, ".gif")
+    path = path
   )
   if (is.null(fps)) {
     magick::image_annotate(
