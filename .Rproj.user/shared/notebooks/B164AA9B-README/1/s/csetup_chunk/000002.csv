@@ -4,6 +4,6 @@
 "0","  message = FALSE, "
 "0","  # warning = FALSE,"
 "0","  comment = ""#>"","
-"0","  fig.align = ""center"","
+"0","  fig.align = ""left"","
 "0","  fig.path = ""tools/README-"""
 "0",")"

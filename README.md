@@ -56,7 +56,7 @@ roundhouse::fetch_categories()
 #> [1] "explicit" "nerdy"
 
 # Generate a random fact with a roundhouse kick!
-roundhouse(width = 40, size = 15)
+roundhouse::kick(width = 40, size = 15)
 ```
 
 <!-- gif <- roundhouse(width = 40, size = 15) -->
@@ -65,9 +65,8 @@ roundhouse(width = 40, size = 15)
 
 ``` r
 # Or simply supply your own text!
-library(roundhouse)
-roundhouse("Chuck Norris can’t test for equality because he has no equal.",
-           width = 40, size = 25, fps = 5)
+roundhouse::kick("Chuck Norris can’t test for equality because he has no equal.",
+                 type = 2, width = 40, size = 25, fps = 5)
 ```
 
 <img src="tools/README-example-02-1.gif" style="display: block; margin: auto auto auto 0;" />

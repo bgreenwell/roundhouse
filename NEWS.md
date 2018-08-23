@@ -2,7 +2,7 @@
 
 * New function `roundhouse()` for generating a random fact with a roundhouse kick [(#1)](https://github.com/bgreenwell/roundhouse/issues/1).
 
-* `roundhouse()` gained three new arguments: `text`, `fps`, and `loop`.
+* `kick()` gained three new arguments: `text`, `type`, `fps`, and `loop`.
 
 
 # roundhouse 0.0.1

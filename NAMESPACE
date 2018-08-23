@@ -2,5 +2,5 @@
 
 S3method(print,random_fact)
 export(fetch_categories)
+export(kick)
 export(random_fact)
-export(roundhouse)
