@@ -18,7 +18,7 @@ g <- ggplot() +
   geom_polygon(data = hex, aes(x, y), color = "black",
                fill = 'white', size = 3) +
   annotation_custom(img, xmin = -Inf, xmax = Inf, ymin = -0.5, ymax = 1) +
-  annotate(geom = "text", x = 0, y = 0.5, color = "black", size = 9,
+  annotate(geom = "text", x = 0, y = 0.5, color = "black", size = 7,
            label = "roundhouse") +
   coord_equal(xlim = range(hex$x), ylim = range(hex$y)) +
   scale_x_continuous(expand = c(0.04, 0)) +
@@ -29,7 +29,7 @@ g <- ggplot() +
 print(g)
 
 png("tools/roundhouse-logo.png", width = 181, height = 209,
-    bg = "transparent", type = "cairo-png")
+    bg = "transparent")
 print(g)
 dev.off()
 
