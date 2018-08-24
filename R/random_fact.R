@@ -75,7 +75,6 @@ print.random_fact <- function(x, ...) {
   print(unlist(lapply(x$content$value, function(y) {
     gsub("&quot;", replacement = "'", x = y[["joke"]])
   })))
-  # print.default(x$content$value[[1L]]$joke)
   invisible(x)
 }
 
