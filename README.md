@@ -62,8 +62,6 @@ roundhouse::fetch_categories()
 roundhouse::kick(width = 40, size = 15)
 ```
 
-<!-- gif <- roundhouse(width = 40, size = 15) -->
-<!-- magick::image_write(gif, path = "tools/roundhouse.gif") -->
 ![](tools/roundhouse.gif)
 
 ``` r
