@@ -5,6 +5,8 @@ roundhouse: An R wrapper to the ICNDb API <img src="tools/roundhouse-logo.png" a
 Status](https://travis-ci.org/bgreenwell/roundhouse.svg?branch=master)](https://travis-ci.org/bgreenwell/roundhouse)
 [![AppVeyor Build
 Status](https://ci.appveyor.com/api/projects/status/github/bgreenwell/roundhouse?branch=master&svg=true)](https://ci.appveyor.com/project/bgreenwell/roundhouse)
+[![Coverage
+Status](https://img.shields.io/codecov/c/github/bgreenwell/roundhouse/master.svg)](https://codecov.io/github/bgreenwell/roundhouse?branch=master)
 [![lifecycle](https://img.shields.io/badge/lifecycle-maturing-brightgreen.svg)](https://www.tidyverse.org/lifecycle/#stable)
 
 Overview
