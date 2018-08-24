@@ -19,7 +19,7 @@ through bar window). Default is 1.}
 \item{width}{Integer specifying the number of characters per line. Default is
 35}
 
-\item{size}{Integer specifying the font size in pixels. Defaul is 10.}
+\item{size}{Integer specifying the font size in pixels. Default is 10.}
 
 \item{color}{Character string specifying the color of the text.}
 
@@ -38,10 +38,12 @@ Generate a roundhouse kick from Chuck Norris...with a random fact (or user-
 supplied text).
 }
 \examples{
+\dontrun{
 # Random fact
 kick(width = 40, size = 15)
 
 # User-supplied text
 kick("Chuck Norris can’t test for equality because he has no equal.",
      type = 2, width = 40, size = 25, fps = 5)
+}
 }

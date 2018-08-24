@@ -1,6 +1,6 @@
 #' Random Chuck Norris facts
 #'
-#' Query the internet Chuck Norris databse (ICNDb) for a random Chuck Norris
+#' Query the internet Chuck Norris database (ICNDb) for a random Chuck Norris
 #' fact.
 #'
 #' @param n Integer specifying the number of random facts to return. Default is
@@ -8,13 +8,13 @@
 #'
 #' @param include Character string specifying the category of the joke. Default
 #' is \code{NULL} meaning use all available categories in the query. The
-#' available categories can be viewed using \code{fetch_categories()}. (
-#' Currently ignored.)
+#' available categories can be viewed using \code{fetch_categories()}.
+#' (Currently ignored.)
 #'
-#' @param exclude Character string specifying the categories to excluse.
-#' Currently ignored. Default is \code{NULL} meaning use all available
-#' categories in the query. The available categories can be viewed using
-#' \code{fetch_categories()}. (Currently ignored.)
+#' @param exclude Character string specifying the categories to exclude.
+#' Default is \code{NULL} meaning use all available categories in the query.
+#' The available categories can be viewed using \code{fetch_categories()}.
+#' (Currently ignored.)
 #'
 #' @return An object of class \code{"random_fact"}; essentially a character
 #' vector.

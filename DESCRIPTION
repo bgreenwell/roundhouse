@@ -1,7 +1,7 @@
 Package: roundhouse
 Type: Package
 Title: An R Wrapper to the ICNDb API
-Version: 0.0.1.9000
+Version: 0.0.1
 Authors@R: person("Brandon", "Greenwell", email = "greenwell.brandon@gmail.com",
   role = c("aut", "cre"))
 Description: An R wrapper to the Internet Chuck Norris database (ICNDb) API for 

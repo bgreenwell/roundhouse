@@ -14,7 +14,7 @@
 #' @param width Integer specifying the number of characters per line. Default is
 #' 35
 #'
-#' @param size Integer specifying the font size in pixels. Defaul is 10.
+#' @param size Integer specifying the font size in pixels. Default is 10.
 #'
 #' @param color Character string specifying the color of the text.
 #'
@@ -31,12 +31,14 @@
 #' @export
 #'
 #' @examples
+#' \dontrun{
 #' # Random fact
 #' kick(width = 40, size = 15)
 #'
 #' # User-supplied text
 #' kick("Chuck Norris can’t test for equality because he has no equal.",
 #'      type = 2, width = 40, size = 25, fps = 5)
+#' }
 kick <- function(text = NULL, type = 1, width = 35, size = 20, color = "white",
                  fps = NULL, loop = 0, ...) {
   if (!requireNamespace("magick", quietly = TRUE)) {

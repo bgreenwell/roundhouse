@@ -12,20 +12,20 @@ random_fact(n = 1L, include = NULL, exclude = NULL)
 
 \item{include}{Character string specifying the category of the joke. Default
 is \code{NULL} meaning use all available categories in the query. The
-available categories can be viewed using \code{fetch_categories()}. (
-Currently ignored.)}
+available categories can be viewed using \code{fetch_categories()}.
+(Currently ignored.)}
 
-\item{exclude}{Character string specifying the categories to excluse.
-Currently ignored. Default is \code{NULL} meaning use all available
-categories in the query. The available categories can be viewed using
-\code{fetch_categories()}. (Currently ignored.)}
+\item{exclude}{Character string specifying the categories to exclude.
+Default is \code{NULL} meaning use all available categories in the query.
+The available categories can be viewed using \code{fetch_categories()}.
+(Currently ignored.)}
 }
 \value{
 An object of class \code{"random_fact"}; essentially a character
 vector.
 }
 \description{
-Query the internet Chuck Norris databse (ICNDb) for a random Chuck Norris
+Query the internet Chuck Norris database (ICNDb) for a random Chuck Norris
 fact.
 }
 \examples{
