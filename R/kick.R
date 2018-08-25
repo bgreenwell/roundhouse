@@ -55,13 +55,14 @@ kick <- function(text = NULL, type = 1, width = 35, size = 20, color = "white",
       x = random_fact()[["content"]][["value"]][[1L]][["joke"]]
     )
   }
-  path <- system.file("extdata", paste0("kick-0", type, ".gif"),
-                      package = "roundhouse")
+  url <- c(
+    "https://media.giphy.com/media/l1J3nY7N7LBrBobVm/giphy.gif",
+    "https://media.giphy.com/media/26n6MnzMOIrDGQJmo/giphy.gif"
+  )[type]
+  # path <- system.file("extdata", paste0("kick-0", type, ".gif"),
+  #                     package = "roundhouse")
   text <- paste0(strwrap(text, width = width), collapse = "\n")
-  gif <- magick::image_read(
-    # path = "https://media.giphy.com/media/l1J3nY7N7LBrBobVm/giphy.gif"
-    path = path
-  )
+  gif <- magick::image_read(path = url)
   if (is.null(fps)) {
     magick::image_annotate(
       image = gif, text = text, color = color, size = size, ...

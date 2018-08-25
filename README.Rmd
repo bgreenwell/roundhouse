@@ -26,7 +26,8 @@ knitr::opts_chunk$set(
 
 ## Overview 
 
-Generate random Chuck Norris facts from the excellent internet Chuck Norris database `r emo::ji("sunglasses")`
+Generate random Chuck Norris facts from the excellent internet Chuck Norris database `r emo::ji("sunglasses")`.
+
 
 ## Sample fact
 
@@ -36,17 +37,20 @@ Break salesman into N pieces.
 Kick each piece to a different city.
 ```
 
+
 ## Installation
 
 You can install the development version of `roundhouse` from GitHub using
-```{r, eval=FALSE}
+
+```{r install, eval=FALSE}
 if (!requireNamespace("devtools")) {
   install.packages("devtools")
 }
 devtools::install_github("bgreenwell/roundhouse")
 ```
 
-## Basic usage
+
+## Example usage
 
 `r emo::ji("warning")` **WARNING:** Some facts may contain explicit material!
 
@@ -70,11 +74,13 @@ roundhouse::kick(width = 40, size = 15)
 ```
 
 ![](tools/roundhouse.gif)
+
 ```{r example-02}
 # Or simply supply your own text!
 roundhouse::kick("Chuck Norris can’t test for equality because he has no equal.",
                  type = 2, width = 40, size = 25, fps = 5)
 ```
+
 
 ## Inspirations
 

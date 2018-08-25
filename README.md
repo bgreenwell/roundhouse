@@ -13,7 +13,7 @@ Overview
 --------
 
 Generate random Chuck Norris facts from the excellent internet Chuck
-Norris database 😎
+Norris database 😎.
 
 Sample fact
 -----------
@@ -38,8 +38,8 @@ if (!requireNamespace("devtools")) {
 devtools::install_github("bgreenwell/roundhouse")
 ```
 
-Basic usage
------------
+Example usage
+-------------
 
 ⚠️ **WARNING:** Some facts may contain explicit material!
 
