@@ -7,6 +7,8 @@ Authors@R: person("Brandon", "Greenwell", email = "greenwell.brandon@gmail.com",
 Description: An R wrapper to the Internet Chuck Norris database (ICNDb) API for 
   generating random Chuck Norris facts.
 License: GPL (>= 2)
+URL: ttps://github.com/bgreenwell/roundhouse
+BugReports: https://github.com/bgreenwell/roundhouse/issues
 Imports:
     httr,
     jsonlite
