@@ -24,11 +24,13 @@
 #' @export
 #'
 #' @examples
+#' \dontrun{
 #' # Generate a random fact
 #' random_fact()
 #'
 #' # Generate multiple random facts
 #' random_fact(3)
+#' }
 random_fact <- function(n = 1L, include = NULL, exclude = NULL) {
 
   # Query the ICNDb API
@@ -86,8 +88,10 @@ print.random_fact <- function(x, ...) {
 #' @export
 #'
 #' @examples
+#' \dontrun{
 #' # Fetch all available fact categories
 #' fetch_categories()
+#' }
 fetch_categories <- function() {
 
   # Query ICNDb API

@@ -1,13 +1,13 @@
 Package: roundhouse
 Type: Package
-Title: An R Wrapper to the ICNDb API
-Version: 0.0.1
+Title: An R Wrapper to the 'ICNDb' API
+Version: 0.0.1.9000
 Authors@R: person("Brandon", "Greenwell", email = "greenwell.brandon@gmail.com",
   role = c("aut", "cre"))
-Description: An R wrapper to the Internet Chuck Norris database (ICNDb) API for 
+Description: An R wrapper to the 'Internet Chuck Norris database' ('ICNDb') API for 
   generating random Chuck Norris facts.
 License: GPL (>= 2)
-URL: ttps://github.com/bgreenwell/roundhouse
+URL: https://github.com/bgreenwell/roundhouse
 BugReports: https://github.com/bgreenwell/roundhouse/issues
 Imports:
     httr,

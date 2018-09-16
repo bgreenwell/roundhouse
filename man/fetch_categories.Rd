@@ -10,6 +10,8 @@ fetch_categories()
 Fetch all available Chuck Norris fact categories.
 }
 \examples{
+\dontrun{
 # Fetch all available fact categories
 fetch_categories()
+}
 }

@@ -29,9 +29,11 @@ Query the internet Chuck Norris database (ICNDb) for a random Chuck Norris
 fact.
 }
 \examples{
+\dontrun{
 # Generate a random fact
 random_fact()
 
 # Generate multiple random facts
 random_fact(3)
+}
 }
