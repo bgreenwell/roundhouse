@@ -4,7 +4,8 @@
 \alias{random_fact}
 \title{Random Chuck Norris facts}
 \usage{
-random_fact(n = 1L, include = NULL, exclude = NULL)
+random_fact(n = 1L, include = NULL, exclude = NULL, sound = FALSE,
+  sound_repeat = 1)
 }
 \arguments{
 \item{n}{Integer specifying the number of random facts to return. Default is
@@ -19,6 +20,12 @@ available categories can be viewed using \code{fetch_categories()}.
 Default is \code{NULL} meaning use all available categories in the query.
 The available categories can be viewed using \code{fetch_categories()}.
 (Currently ignored.)}
+
+\item{sound}{Logical indicatin whether or not "Chuck Norris" should be
+shouted when generating random facts. Default is \code{FALSE}.}
+
+\item{sound_repeat}{Integer specifying the number of times the sound should
+be repeated. Default is 1. (Only matters if \code{sound = TRUE}.)}
 }
 \value{
 An object of class \code{"random_fact"}; essentially a character
