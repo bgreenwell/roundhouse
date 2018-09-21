@@ -4,9 +4,8 @@
 \alias{punch}
 \title{Roundhouse punch}
 \usage{
-punch(text = NULL, type = 1, width = 35, size = 20,
-  color = "white", fps = NULL, loop = 0, sound = FALSE,
-  sound_repeat = 1, ...)
+punch(text = NULL, width = 35, size = 20, color = "white",
+  fps = NULL, loop = 0, sound = FALSE, sound_repeat = 1, ...)
 }
 \arguments{
 \item{text}{Character string specifying the text to display with the

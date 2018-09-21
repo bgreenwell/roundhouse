@@ -42,16 +42,12 @@
 #' punch("Chuck Norris can’t test for equality because he has no equal.",
 #'      type = 2, width = 40, size = 25, fps = 5)
 #' }
-punch <- function(text = NULL, type = 1, width = 35, size = 20, color = "white",
-                 fps = NULL, loop = 0, sound = FALSE, sound_repeat = 1, ...) {
+punch <- function(text = NULL, width = 35, size = 20, color = "white",
+                  fps = NULL, loop = 0, sound = FALSE, sound_repeat = 1, ...) {
   if (!requireNamespace("magick", quietly = TRUE)) {
     stop("The magick package is required for roundhouse punches.",
          call. = FALSE)
   }
-  if (!(type %in% 1:2)) {
-    stop("Argument `type` must be 1 or 2.")
-  }
-
   if (is.null(text)) {
     text <- gsub(
       pattern = "&quot;",
