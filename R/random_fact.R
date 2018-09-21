@@ -67,12 +67,13 @@ random_fact <- function(n = 1L, include = NULL, exclude = NULL, sound = FALSE,
 
   # Play awesome sound
   if (sound) {
+    mp3_file <- system.file("sounds", "chuck-norris.mp3",
+                            package = "roundhouse")
     for (i in seq_len(sound_repeat)) {
       if (Sys.info()["sysname"] == "Darwin") {
-        tuneR::play(tuneR::readMP3("inst/sounds/chuck-norris.mp3"),
-                    player = "/usr/bin/afplay")
+        tuneR::play(tuneR::readMP3(mp3_file), player = "/usr/bin/afplay")
       } else {
-        tuneR::play(tuneR::readMP3("inst/sounds/chuck-norris.mp3"))
+        tuneR::play(tuneR::readMP3(mp3_file))
       }
     }
   }
