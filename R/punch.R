@@ -28,6 +28,9 @@
 #' @param sound_repeat Integer specifying the number of times the sound should
 #' be repeated. Default is 1. (Only matters if \code{sound = TRUE}.)
 #'
+#' @param sound_delay Integer specifying the delay (in seconds) to wait before
+#' shouting "Chuck Norris". Default is 0. (Only matters if \code{sound = TRUE}.)
+#'
 #' @param ... Additional optional arguments to be passed onto
 #' \code{\link[magick]{image_annotate}}.
 #'
@@ -43,7 +46,8 @@
 #'      type = 2, width = 40, size = 25, fps = 5)
 #' }
 punch <- function(text = NULL, width = 35, size = 20, color = "white",
-                  fps = NULL, loop = 0, sound = FALSE, sound_repeat = 1, ...) {
+                  fps = NULL, loop = 0, sound = FALSE, sound_repeat = 1,
+                  sound_delay = 0, ...) {
   if (!requireNamespace("magick", quietly = TRUE)) {
     stop("The magick package is required for roundhouse punches.",
          call. = FALSE)
@@ -73,8 +77,12 @@ punch <- function(text = NULL, width = 35, size = 20, color = "white",
     )
   }
 
+  # Display gif
+  print(res)
+
   # Play awesome sound(s)
   if (sound) {
+    Sys.sleep(sound_delay)
     mp3_file <- system.file("sounds", "chuck-norris.mp3",
                             package = "roundhouse")
     for (i in seq_len(sound_repeat)) {
@@ -87,6 +95,6 @@ punch <- function(text = NULL, width = 35, size = 20, color = "white",
   }
 
   # Print GIF
-  res
+  invisible(res)
 
 }
