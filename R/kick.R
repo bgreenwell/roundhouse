@@ -49,11 +49,7 @@ kick <- function(text = NULL, type = 1, width = 35, size = 20, color = "white",
   }
 
   if (is.null(text)) {
-    text <- gsub(
-      pattern = "&quot;",
-      replacement = "'",
-      x = random_fact()[["content"]][["value"]][[1L]][["joke"]]
-    )
+    text <- random_fact(1L)
   }
   url <- c(
     "https://media.giphy.com/media/l1J3nY7N7LBrBobVm/giphy.gif",

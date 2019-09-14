@@ -30,43 +30,20 @@
 #' @export
 #'
 #' @examples
-#' \dontrun{
 #' # Generate a random fact
 #' random_fact()
 #'
 #' # Generate multiple random facts
-#' random_fact(3)
-#' }
+#' random_fact(3, sound = TRUE)
 random_fact <- function(n = 1L, include = NULL, exclude = NULL, sound = FALSE,
                         sound_repeat = 1) {
 
-  # Query the ICNDb API
-  # url <- modify_url("http://api.icndb.com/jokes/random/", path = n)
-  url <- paste0("http://api.icndb.com/jokes/random/", n)
-  resp <- httr::GET(url)
-  if (httr::http_type(resp) != "application/json") {
-    stop("API did not return json", call. = FALSE)
-  }
-
-  # Parse the returned JSON file
-  parsed <- jsonlite::fromJSON(httr::content(resp, as = "text"),
-                               simplifyVector = FALSE)
-
-  # Turn API errors into R errors
-  if (httr::http_error(resp)) {
-    stop(
-      sprintf(
-        "ICNDb API request failed [%s]\n%s\n<%s>",
-        httr::status_code(resp),
-        parsed$message,
-        parsed$documentation_url
-      ),
-      call. = FALSE
-    )
-  }
-
-  # Play awesome sound
+  # Play awesome sound (If requested)
   if (sound) {
+    if (!requireNamespace("magick", quietly = TRUE)) {
+      stop("The tuneR package is required when setting `sound = TRUE` for ",
+           "additional awesomeness.", call. = FALSE)
+    }
     mp3_file <- system.file("sounds", "chuck-norris.mp3",
                             package = "roundhouse")
     for (i in seq_len(sound_repeat)) {
@@ -78,67 +55,8 @@ random_fact <- function(n = 1L, include = NULL, exclude = NULL, sound = FALSE,
     }
   }
 
-  # Return a random_fact object (a list)
-  structure(
-    list(
-      "content" = parsed,
-      "response" = resp
-    ),
-    class = "random_fact"
-  )
-
-}
-
-
-#' @keywords internal
-#'
-#' @export
-print.random_fact <- function(x, ...) {
-  print(unlist(lapply(x$content$value, function(y) {
-    gsub("&quot;", replacement = "'", x = y[["joke"]])
-  })))
-  invisible(x)
-}
-
-
-#' Fetch available categories
-#'
-#' Fetch all available Chuck Norris fact categories.
-#'
-#' @export
-#'
-#' @examples
-#' \dontrun{
-#' # Fetch all available fact categories
-#' fetch_categories()
-#' }
-fetch_categories <- function() {
-
-  # Query ICNDb API
-  url <- "http://api.icndb.com/categories"
-  resp <- httr::GET(url)
-  if (httr::http_type(resp) != "application/json") {
-    stop("API did not return json", call. = FALSE)
-  }
-
-  # Parse the returned JSON file
-  parsed <- jsonlite::fromJSON(httr::content(resp, as = "text"),
-                               simplifyVector = FALSE)
-
-  # Turn API errors into R errors
-  if (httr::http_error(resp)) {
-    stop(
-      sprintf(
-        "ICNDb API request failed [%s]\n%s\n<%s>",
-        httr::status_code(resp),
-        parsed$message,
-        parsed$documentation_url
-      ),
-      call. = FALSE
-    )
-  }
-
-  # Return vector of categories
-  unlist(parsed$value)
+  # Return random fact(s)
+  roundhouse::facts[["fact"]][sample(nrow(roundhouse::facts), size = n,
+                                     replace = FALSE)]
 
 }

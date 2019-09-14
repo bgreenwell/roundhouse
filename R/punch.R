@@ -53,11 +53,7 @@ punch <- function(text = NULL, width = 35, size = 20, color = "white",
          call. = FALSE)
   }
   if (is.null(text)) {
-    text <- gsub(
-      pattern = "&quot;",
-      replacement = "'",
-      x = random_fact()[["content"]][["value"]][[1L]][["joke"]]
-    )
+    text <- random_fact(1L)
   }
   url <- "https://media.giphy.com/media/Fs8pXeLXuKUGA/giphy.gif"
   text <- paste0(strwrap(text, width = width), collapse = "\n")
