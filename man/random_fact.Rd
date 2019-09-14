@@ -21,7 +21,7 @@ Default is \code{NULL} meaning use all available categories in the query.
 The available categories can be viewed using \code{fetch_categories()}.
 (Currently ignored.)}
 
-\item{sound}{Logical indicatin whether or not "Chuck Norris" should be
+\item{sound}{Logical indicating whether or not "Chuck Norris" should be
 shouted when generating random facts. Default is \code{FALSE}.}
 
 \item{sound_repeat}{Integer specifying the number of times the sound should

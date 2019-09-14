@@ -1,6 +1,9 @@
 roundhouse: An R wrapper to the ICNDb API <img src="tools/roundhouse-logo.png" align="right" width="130" height="150" />
 ========================================================================================================================
 
+<!-- badges: start -->
+[![CRAN
+status](https://www.r-pkg.org/badges/version/roundhouse)](https://CRAN.R-project.org/package=roundhouse)
 [![Travis-CI Build
 Status](https://travis-ci.org/bgreenwell/roundhouse.svg?branch=master)](https://travis-ci.org/bgreenwell/roundhouse)
 [![AppVeyor Build
@@ -8,6 +11,7 @@ Status](https://ci.appveyor.com/api/projects/status/github/bgreenwell/roundhouse
 [![Coverage
 Status](https://img.shields.io/codecov/c/github/bgreenwell/roundhouse/master.svg)](https://codecov.io/github/bgreenwell/roundhouse?branch=master)
 [![lifecycle](https://img.shields.io/badge/lifecycle-maturing-brightgreen.svg)](https://www.tidyverse.org/lifecycle/#stable)
+<!-- badges: end -->
 
 Overview
 --------
@@ -18,7 +22,7 @@ Norris database 😎.
 Sample fact
 -----------
 
-Chuck Norris solved the [travelling salesman
+Chuck Norris solved the [traveling salesman
 problem](https://en.wikipedia.org/wiki/Travelling_salesman_problem) in
 *O*(1) time. Here’s the pseudo-code:
 

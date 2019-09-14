@@ -28,7 +28,7 @@ should be repeated. Though a single roundhouse punch is always sufficient,
 the default is \code{0} which results in an infinite number of roundhouse
 punches.}
 
-\item{sound}{Logical indicatin whether or not "Chuck Norris" should be
+\item{sound}{Logical indicating whether or not "Chuck Norris" should be
 shouted when generating random facts. Default is \code{FALSE}.}
 
 \item{sound_repeat}{Integer specifying the number of times the sound should
